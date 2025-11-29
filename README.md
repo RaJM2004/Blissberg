@@ -1,11 +1,6 @@
 # Blissberg Nexus AI
 
-This project was entirely designed and built using [Lovable](https://lovable.dev).
-
-## Project Info
-
-**Built by**: Lovable AI
-**Project URL**: https://lovable.dev/projects/091e332b-be6e-4999-a5f1-a64d38d84f3f
+A modern, high-performance AI-themed web application built with the latest web technologies.
 
 ## Technologies Used
 
@@ -27,4 +22,4 @@ To run this project locally:
 
 ## Deployment
 
-Deployments are managed through the Lovable platform.
+To deploy this project, you can build the production bundle using `npm run build` and host the `dist` folder on any static hosting provider (e.g., Vercel, Netlify, GitHub Pages).
