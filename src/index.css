@@ -1,0 +1,81 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .font-cinzel {
+    font-family: 'Cinzel', serif;
+  }
+
+  :root {
+   
+
+    --card: 240 17% 14%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 265 84% 64%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 16% 54%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 7% 25%;
+    --muted-foreground: 240 5% 70%;
+
+    --accent: 199 85% 48%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5% 26%;
+    --input: 240 4% 20%;
+    --ring: 265 84% 64%;
+
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-border selection:bg-blissberg-primary/20 selection:text-white;
+  }
+
+  body {
+    @apply text-foreground antialiased overflow-x-hidden;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply backdrop-blur-lg bg-white/5 border border-white/10 shadow-[0_4px_12px_-2px_rgba(0,0,0,0.3)];
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-blissberg-primary via-blissberg-accent to-blissberg-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-text-shimmer;
+  }
+  
+  .glow-effect {
+    @apply relative;
+  }
+  
+  .glow-effect::after {
+    @apply content-[''] absolute -inset-[1px] rounded-[inherit] bg-gradient-to-r from-blissberg-primary to-blissberg-accent opacity-50 blur-[5px] -z-10 transition-all duration-300 animate-glow;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
